@@ -25,20 +25,20 @@ class TicTacToeTest < Minitest::Test
     end
   end
  
-  # def test_a_board_with_two_Xs_and_one_0_is_valid?
-  #   game = TicTacToe.new("X X   0  ")
-  #   assert game.valid?
-  # end
+  def test_a_board_with_two_Xs_and_one_0_is_valid?
+    game = TicTacToe.new("X X   0  ")
+    assert game.valid?
+  end
  
-  # def test_a_board_with_three_0_and_one_X_is_invalid?
-  #   game = TicTacToe.new(" 0 0 0X  ")
-  #   refute game.valid?
-  # end
+  def test_a_board_with_three_0_and_one_X_is_invalid?
+    game = TicTacToe.new(" 0 0 0X  ")
+    refute game.valid?
+  end
  
-  # def test_the_board_with_nine_blank_spaces_is_valid
-  #   game = TicTacToe.new('         ')
-  #   assert game.valid?
-  # end
+  def test_the_board_with_nine_blank_spaces_is_valid
+    game = TicTacToe.new('         ')
+    assert game.valid?
+  end
  
   # def test_the_game_with_a_horizontal_line_is_finished
   #   game = TicTacToe.new("XXX 0 0  ")
