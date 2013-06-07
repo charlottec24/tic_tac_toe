@@ -40,35 +40,35 @@ class TicTacToeTest < Minitest::Test
     assert game.valid?
   end
  
-  # def test_the_game_with_a_horizontal_line_is_finished
-  #   game = TicTacToe.new("XXX 0 0  ")
-  #   assert game.valid?
-  #   assert game.finished?
-  # end
+  def test_the_game_with_a_horizontal_line_is_finished
+    game = TicTacToe.new("XXX 0 0  ")
+    assert game.valid?
+    assert game.finished?
+  end
  
-  # def test_the_game_with_a_vertical_line_is_finished
-  #   game = TicTacToe.new('X 0X00X  ')
-  #   assert game.valid?
-  #   assert game.finished?
-  # end
+  def test_the_game_with_a_vertical_line_is_finished
+    game = TicTacToe.new('X 0X00X  ')
+    assert game.valid?
+    assert game.finished?
+  end
  
-  # def test_the_game_with_a_diagonal_line_is_finished
-  #   game = TicTacToe.new("X  0X0  X")
-  #   assert game.valid?
-  #   assert game.finished?
-  # end
+  def test_the_game_with_a_diagonal_line_is_finished
+    game = TicTacToe.new("X  0X0  X")
+    assert game.valid?
+    assert game.finished?
+  end
  
-  # def test_the_game_with_a_diagonal_line_is_finished
-  #   game = TicTacToe.new("XX0 0 0XX")
-  #   assert game.valid?
-  #   assert game.finished?
-  # end
+  def test_the_game_with_a_diagonal_line_is_finished
+    game = TicTacToe.new("XX0 0 0XX")
+    assert game.valid?
+    assert game.finished?
+  end
  
-  # def test_the_game_without_a_winner_is_not_finished
-  #   game = TicTacToe.new("XX00XXX00")
-  #   assert game.valid?
-  #   assert !game.finished?
-  # end
+  def test_the_game_without_a_winner_is_not_finished
+    game = TicTacToe.new("XX00XXX00")
+    assert game.valid?
+    assert !game.finished?
+  end
  
   # def test_the_game_that_is_one_step_from_winning_can_calculate_the_best_move
   #   game = TicTacToe.new("X 0X0    ")    
