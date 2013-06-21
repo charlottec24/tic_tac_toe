@@ -1,0 +1,26 @@
+<h1>Tic Tac Toe</h1>
+<div class="flashspace">
+  <%= styled_flash %>
+</div>  
+<form action="/" method="post">
+  <div class="board">
+    <table cellspacing="0">
+      <tbody>
+        <tr>
+          <% @cells.each_with_index do |cell, i| %>
+            <%= "</tr><tr>" if end_of_row?(i) %>
+            <td class="cell">
+              <input type='text' <%= cell.value == @solved_cells[i].value ? "class='correct'" : "class='wrong'" %> name="cells[]" maxlength="1" onClick="this.select();" autocomplete="off" pattern="[1-9]" title="Please input a number between 1-9" <%= "value=#{cell.to_s}"%> "" <%= "readonly" if cell.value == @starting_cells[i].value && cell.value == @solved_cells[i].value %> >
+            </td>
+          <% end %>
+        </tr>
+      </tbody>
+    </table>
+    <div class="buttons">
+      <button type="submit">Check</button>
+      <button type="button"><a href="/new">New Easy Game</a></button>
+      <button type="button"><a href="/hard">New Hard Game</a></button>
+      <button type="button"><a href="/solution">Solution</a></button>
+    </div>
+  </div>
+</form>

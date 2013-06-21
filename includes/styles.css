@@ -1,0 +1,32 @@
+body {
+  font-family: Helvetica;
+}
+
+.board {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+table
+{
+  border-collapse:collapse;
+  border: 1px solid #747D7D;
+  margin: 0 auto;
+}
+
+td:nth-of-type(3n+3)  {
+ border-right: 4px solid #747D7D;
+}
+
+tr:nth-of-type(3n+3)  {
+ border-bottom: 4px solid #747D7D;
+}
+
+td input {
+  border: 1px solid gray;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 1.2em;
+}
